@@ -6,7 +6,7 @@ This is an MCP server for Java conferences, built using Spring boot and Spring A
 
 ## Data Source
 
-The server fetches data by parsing the `README.md` file from the `javaconferences/javaconferences.github.io` repository.
+The server fetches data by parsing the `README.md` file from the [🔗 javaconferences/javaconferences.github.io](https://github.com/javaconferences/javaconferences.github.io) repository.
 The specific URL is configured in `application.properties` and defaults to:
 `https://raw.githubusercontent.com/javaconferences/javaconferences.github.io/main/README.md`
 
