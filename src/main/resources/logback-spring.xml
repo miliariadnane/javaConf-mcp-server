@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+
+    <appender name="CONSOLE_STDERR" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${CONSOLE_LOG_PATTERN}</pattern>
+            <charset>${CONSOLE_LOG_CHARSET}</charset>
+        </encoder>
+        <target>System.err</target>
+    </appender>
+
+    <!-- Configure the Root logger -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE_STDERR" />
+    </root>
+</configuration> 
