@@ -1,17 +1,13 @@
 # 🔌 Java Conferences MCP Server 🔌
 
-This is an MCP server for Java conferences, built using Spring boot and Spring AI with MCP starter.
-
-> 💡 This project provides a tool function that allows AI models to retrieve information about upcoming Java conferences by parsing a public GitHub repository and asking questions about conference names, CPF links, locations, CPF status (open/closed), and more.
+A Model Call Protocol (MCP) server that provides AI assistants with access to data about Java conferences from around the world. This server exposes conference information from a public GitHub repository including names, dates, locations, and Call for Papers (CFP) details through a standardized MCP interface.
 
 ## Data Source
-
 The server fetches data by parsing the `README.md` file from the [🔗 javaconferences/javaconferences.github.io](https://github.com/javaconferences/javaconferences.github.io) repository.
 The specific URL is configured in `application.properties` and defaults to:
 `https://raw.githubusercontent.com/javaconferences/javaconferences.github.io/main/README.md`
 
 ## Provided Tool
-
 *   **Name:** `getJavaConferences`
 *   **Description:** Get information about Java conferences for a specific year (if specified and found in the source) or the current year by default. Parses data for all years found under H3 headings in the source markdown file.
 *   **Input Parameter:**
